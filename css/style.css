@@ -1,4 +1,5 @@
 body {
+    font-family: 'PT Serif', Cambria, serif;
     font-size: 100%;
     line-height: 1.125em;
     background-color: white;
@@ -26,12 +27,12 @@ body {
 }
 
 a {
-    color: #55cdd0;
+    color: #62a4f0;
     text-decoration: none;
 }
 
 a:hover {
-    color: #48b1b4;
+    color: #aecef5;
 }
 
 .index {
@@ -40,7 +41,6 @@ a:hover {
     color: grey;
     line-height: 1.8em;
     font-size: 2.25em;
-    font-family: 'Alef', sans-serif;
     font-style: normal;
     font-weight: 700;
     text-decoration: none;
@@ -53,15 +53,15 @@ a:hover {
 }
 
 .header a {
-    color: #797979;
+    color: #666;
 }
 
 .header h1 {
-    color: #7863bb;
+    /*color: #7863bb;*/
+  color: #62a4f0;
     margin: 0.25em auto .5em;
     max-width: 90%;
     font-size:  2.625em;
-    font-family: 'Alef', sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 1.25em;
@@ -70,9 +70,8 @@ a:hover {
 .header h2, .header h3 {
     margin-top: 0em;
     font-size: 1.25em;
-    font-family: 'Alef', sans-serif;
     font-style: normal;
-    color: #797979;
+    color: #666;
     font-weight: 400;
     letter-spacing: 0.0625em;
 }
@@ -92,17 +91,12 @@ a:hover {
     padding: 1em;
 }
 
-.body h1, .body h2, .body h3 {
-    font-family: 'Alef', sans-serif;
-}
-
 .body article {
-    font-family: 'Adobe Caslon Pro', 'Fenix', serif;
     font-style: normal;
     font-size: 1.25em;
     font-weight: 400;
     line-height: 1.4em;
-    text-align: justify;
+    /*text-align: justify;*/
     font-feature-settings: 'liga', 'dlig';
     -moz-font-feature-settings: 'liga=1, dlig=1'; 
     -ms-font-feature-settings: 'liga', 'dlig'; 
@@ -120,13 +114,8 @@ a:hover {
 
 pre {
     border: none;
-    -moz-box-shadow:    0 0 .9em rgba(0,0,0,0.25) inset;
-    -webkit-box-shadow: 0 0 .9em rgba(0,0,0,0.25) inset;
-    box-shadow:         0 0 .9em rgba(0,0,0,0.25) inset;
-    background-color: #2d2d2d;
     color: #fff;
     overflow: auto;
-    border-radius: 0.1875em;
     margin-left: auto;
     margin-right: auto;
     padding: 0.625em 0.625em;
@@ -136,7 +125,7 @@ pre {
 code {
     font-size: .8em;
     padding: 0.0625em;
-    color: #797979;
+    color: #666;
     margin-top: -.9em;
     margin-bottom: -.9em;
     white-space: pre;
