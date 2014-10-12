@@ -41,7 +41,7 @@ The main difference between objects and ADT is that they hide internal
 representation in two different ways. ADT use *type abstraction* to do that, and
 objects use *procedural abstraction*.
 
-How they differ?
+How do they differ?
 
 Type abstraction hides representation behind, well, types. Usually you need a
 good type system to easily define type abstractions and thus, ADT. One
