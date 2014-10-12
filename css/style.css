@@ -135,3 +135,10 @@ pre code {
     background: none;
     border: none;
 }
+
+.small {
+    color: #666;
+    font-size: .8em;
+}
+
+.center { text-align: center; }
