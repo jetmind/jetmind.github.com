@@ -68,7 +68,7 @@ consequently, makes you a better programmer!
 
 I know my writing is not very clear. It's more like reminder to me about what
 I've learned from a paper than a tutorial for a reader. If you're interested in
-gaining more rigorous understanding - [go read a paper][paper]!
+gaining more rigorous understanding - [go read the paper][paper]!
 
 
 [hs]: https://www.hackerschool.com/
