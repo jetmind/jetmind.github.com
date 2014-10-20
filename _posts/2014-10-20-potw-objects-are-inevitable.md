@@ -8,7 +8,7 @@ date: 2014-10-20 11:00
 English is not my native language. I would appreciate any feedback.
 </p>
 
-Don't know what is PotW? Check out my [first Read Along][prev-paper].
+Don't know what PotW is? Check out my [first Read Along][prev-paper].
 
 This week's [Hacker School][hs] paper is [The Power of Interoperability: Why
 Objects Are Inevitable][paper] by [Jonathan Aldrich][author]. It is
