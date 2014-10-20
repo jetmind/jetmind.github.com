@@ -58,7 +58,7 @@ a:hover {
 
 .header h1 {
     /*color: #7863bb;*/
-  color: #62a4f0;
+    color: #62a4f0;
     margin: 0.25em auto .5em;
     max-width: 90%;
     font-size:  2.625em;
@@ -104,14 +104,6 @@ a:hover {
     -webkit-font-feature-settings: 'liga', 'dlig'; 
 }
 
-.body ul li {
-    list-style: none;
-}
-
-.body ul {
-    margin: 0;
-}
-
 pre {
     border: none;
     color: #fff;
@@ -135,6 +127,21 @@ pre code {
     background: none;
     border: none;
 }
+
+blockquote {
+    border-left: 1px solid #ddd;
+    padding-left: .6em;
+    font-size: .8em;
+    color: #333;
+}
+
+.body article ul { margin: 0 0 1.5em 0; }
+.body article ul li { list-style: disc; }
+
+/* Post list on main page */
+.body article ul.posts { margin: 0; }
+.body article ul.posts li { list-style: none; }
+
 
 .small {
     color: #666;
