@@ -1,23 +1,60 @@
-title: Igor Bondarenko
-description: Igor Bondarenko
-url: http://jetmind.github.io
+# old theme suff
+#title: Igor Bondarenko
+#description: Igor Bondarenko
+#url: http://jetmind.github.io
 
-author:
-  name: Igor Bondarenko
-  bio: http://jetmind.github.io
+#author:
+  #name: Igor Bondarenko
+  #bio: http://jetmind.github.io
 
-links:
-  - title: GitHub
-    url: https://github.com/jetmind
-    external: true
-  - title: Twitter
-    url: https://twitter.com/igrbnd
-    external: true
-  - title: Feed
-    url: /feed.xml
+#links:
+  #- title: GitHub
+    #url: https://github.com/jetmind
+    #external: true
+  #- title: Twitter
+    #url: https://twitter.com/igrbnd
+    #external: true
+  #- title: Feed
+    #url: /feed.xml
 
-timezone: Europe/Kiev
-pygments: false
-markdown: redcarpet
-redcarpet:
-  extensions: ['smart']
+#timezone: Europe/Kiev
+#pygments: false
+#markdown: redcarpet
+#redcarpet:
+  #extensions: ['smart']
+# end of old theme stuff
+
+
+
+# Site settings
+title:       Pixyll
+email:       your_email@example.com
+author:      John Otander
+description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+baseurl:     ""
+url:         "http://pixyll.com"
+
+# Google analytics
+google_analytics:
+
+# Optional features
+animated:           false
+show_related_posts: false
+show_post_footers:  false
+
+# Social icons
+show_social_icons: false
+github_username:
+twitter_username:
+google_plus_id:
+linkedin_username:
+bitcoin_url:
+paypal_url:
+flattr_button:
+
+# Build settings
+markdown:     kramdown
+permalink:    pretty
+paginate:     3
+sass:
+  compressed: true
