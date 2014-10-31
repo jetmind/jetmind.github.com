@@ -4,11 +4,7 @@ title: "PotW: The Chubby Lock Service for Loosely-Coupled Distributed Systems"
 date: 2014-10-25 13:00
 ---
 
-<p class="small center">
-English is not my native language. I would appreciate any feedback.
-</p>
-
-Wondering what PotW is? Check out my [first Read Along][first-paper].
+*Wondering what PotW is? Check out my [first Read Along][first-paper].*
 
 This week’s [HackerSchool][hs] paper is [The Chubby Lock Service for
 Loosely-Coupled Distributed Systems][paper] by Mike Burrows from Google.

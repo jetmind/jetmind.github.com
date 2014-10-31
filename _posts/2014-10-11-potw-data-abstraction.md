@@ -4,10 +4,6 @@ title: "POTW: On Understanding Data Abstraction, Revisited"
 date: 2014-10-11 13:00
 ---
 
-<p class="small center">
-English is not my native language. I would appreciate any feedback.
-</p>
-
 [Hacker School][hs] has this thing called [Paper of the Week][potw], where they
 pick a paper, read it during a week and share thoughts and insights about it. I
 have no relation to Hacker School but their approach and students and the fact
