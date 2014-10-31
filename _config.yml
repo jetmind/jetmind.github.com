@@ -23,6 +23,7 @@ linkedin_username:
 bitcoin_url:
 paypal_url:
 flattr_button:
+disqus_shortname: jet-techblog
 
 # Build settings
 markdown:     redcarpet
