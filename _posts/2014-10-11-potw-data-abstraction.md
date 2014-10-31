@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "POTW: On Understanding Data Abstraction, Revisited"
+title: "PotW: On Understanding Data Abstraction, Revisited"
 date: 2014-10-11 13:00
 ---
 
