@@ -1,20 +1,16 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="home">
-
-  <div class="posts">
-    {% for post in site.posts %}
-      <div>
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-          <p>
-            <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-              {{ post.title }}
-            </a>
-          </p>
-      </div>
-    {% endfor %}
+<div>
+  {% for post in site.posts %}
+  <div>
+    <p>{{ post.date | date: site.datefmt }}</p>
+    <p>
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        {{ post.title }}
+      </a>
+    </p>
   </div>
-
+  {% endfor %}
 </div>

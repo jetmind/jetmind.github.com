@@ -6,23 +6,14 @@ description: "My personal blog"
 baseurl:     ""
 url:         "http://jetmind.github.io"
 
+datefmt: "%b %-d, %Y"
+
 # Google analytics
 google_analytics: UA-47889324-1
 
-# Optional features
-animated:           false
-show_related_posts: false
-show_post_footers:  false
-
 # Social icons
-show_social_icons: true
 github_username: jetmind
 twitter_username: igrbnd
-google_plus_id:
-linkedin_username:
-bitcoin_url:
-paypal_url:
-flattr_button:
 disqus_shortname: jet-techblog
 
 # Build settings
@@ -31,6 +22,5 @@ redcarpet:
   extensions: ['smart']
 highlighter:   # set to 'pygments' to enable highlighting
 #permalink:    pretty  # commented out to match urls from old theme
-paginate:     5
 sass:
   compressed: true
