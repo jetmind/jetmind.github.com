@@ -7,7 +7,9 @@ $visited-link-color: #88A1BF;
 $code-color: #333;
 $border-color: #f3f3f3;
 $bg-color: #fafafa;
+
 $small: .8rem;
+$footer-size: 120px;
 
 body {
   font-family: Georgia;
@@ -75,13 +77,15 @@ code {
     clear: both;
   }
 }
+.clear { clear: both; }
 .small { font-size: $small; }
 .grey { color: $greyed-out-color; }
 .site-footer {
   text-align: center;
-  padding: 1.5rem 0;
   border-top: thin solid $border-color;
   background-color: $bg-color;
+  height: $footer-size;
+  p { margin-top: 1.5rem; }
 }
 .site-header {
   border-bottom: thin solid $border-color;
@@ -89,4 +93,12 @@ code {
   padding: 1.5rem 0;
   font-size: $small;
 }
-
+.site-wrap {
+  min-height: 100%;
+  margin-bottom: -$footer-size; 
+}
+.site-wrap::after {
+  content: "";
+  display: block;
+  height: $footer-size;
+}
