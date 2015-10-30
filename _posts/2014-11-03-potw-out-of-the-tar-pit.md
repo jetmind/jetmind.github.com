@@ -56,7 +56,7 @@ Conclusion:
 > not be FRP<sup>\*</sup>, but we believe there can be no doubt that it is *simplicity*.
 > 
 > <footer>
-> \* *FRP here means Functional Relational (not Reactive!) Programming*
+>   * FRP here means Functional Relational (not Reactive!) Programming
 > </footer>
 
 Words of Tony Hoare from his 1980 Turing award speech:

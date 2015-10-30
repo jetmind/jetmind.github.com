@@ -2,15 +2,19 @@
 layout: base
 ---
 
-<div>
+<div class="post-list">
   {% for post in site.posts %}
-  <div>
-    <p>{{ post.date | date: site.datefmt }}</p>
-    <p>
-      <a href="{{ post.url | prepend: site.baseurl }}">
-        {{ post.title }}
-      </a>
-    </p>
-  </div>
+    <div class="row">
+      <div class="time">
+        <time datetime="{{ post.date | date: site.datefmt }}">
+          {{ post.date | date: site.datedisplayfmt }}
+        </time>
+      </div>
+      <div class="post-link">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title }}
+        </a>
+      </div>
+    </div>
   {% endfor %}
 </div>

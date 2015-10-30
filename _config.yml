@@ -6,7 +6,8 @@ description: "My personal blog"
 baseurl:     ""
 url:         "http://jetmind.github.io"
 
-datefmt: "%b %-d, %Y"
+datefmt: "%Y-%m-%dT%XZ"
+datedisplayfmt: "%Y, %B %-d"
 
 # Google analytics
 google_analytics: UA-47889324-1
@@ -21,6 +22,6 @@ markdown:     redcarpet
 redcarpet:
   extensions: ['smart']
 highlighter:   # set to 'pygments' to enable highlighting
-#permalink:    pretty  # commented out to match urls from old theme
+# permalink:    pretty  # commented out to match urls from old theme
 sass:
   compressed: true
