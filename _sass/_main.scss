@@ -12,11 +12,11 @@ $small: .8rem;
 $footer-size: 120px;
 
 body {
-  font-family: Georgia;
+  font-family: Gregor, Georgia;
 }
 html, body {
   color: $normal-color;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.5;
   height: 100%;
 }
@@ -102,4 +102,9 @@ code {
   content: "";
   display: block;
   height: $footer-size;
+}
+
+@font-face {
+    font-family: Gregor;
+    src: url('../Gregor_reg_v20-06-2013.otf');
 }
