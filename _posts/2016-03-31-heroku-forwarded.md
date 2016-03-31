@@ -10,15 +10,15 @@ This check is implemented using IP address as person's identity, i.e. it's allow
 
 But. That's not a whole story. Interesting things will happen if client passes more than one `X-Forwarded-For` header, instead of single header with values separated by commas, i.e. this:
 
-```sh
+~~~sh
 curl -H"X-Forwarded-For: 10.10.10.10" -H"X-Forwarded-For: 20.20.20.20" http://host/endpoint
-```
+~~~
 
 instead of this:
 
-```sh
+~~~sh
 curl -H"X-Forwarded-For: 10.10.10.10,20.20.20.20" http://host/endpoint
-```
+~~~
 
 In this case the router will add client's IP *only* to the end of the *first* header, but will pass *both* headers to the app.
 
@@ -28,18 +28,18 @@ On the app side, Clojure's HTTP stack (ring based server) will parse those heade
 
 So, the app will get this:
 
-```sh
+~~~sh
 ...
 X-Forwarded-For: 10.10.10.10,99.99.99.99    # real IP appended by heroku router
 X-Forwarded-For: 20.20.20.20
 ...
-```
+~~~
 
 and parse it into this:
 
-```clojure
+~~~clojure
 {"x-forwarded-for" "10.10.10.10,99.99.99.99,20.20.20.20"
-```
+~~~
 
 The IP address we want is no longer at the end. It is in the middle! So, somebody mean can vote unlimited number of times if he manages to pass additional `X-Forwarded-For` header with fake IP, changing IPs between every request.
 
@@ -47,7 +47,7 @@ I wrote to Heroku support team and they said it's a "a bug / accidental behavior
 
 Luckily, we use Aleph as HTTP server and it allows us to [get the list of headers separately][2], as they was originally passed, because it retains netty's `HttpHeaders` object internally and exposes Clojure's map API over it (doing merging on the go, when header is requested) instead of converting headers to a map beforehand without any ability to recover their original structure. The fix is simple: we get the last IP from the first `X-Forwarded-For` and we're done. The code looks roughly like this:
 
-```clojure
+~~~clojure
 (defn get-all-headers [headers name]
   (if (instance? aleph.http.core.HeaderMap headers)
     (into [] (aleph.http/get-all headers name))
@@ -57,7 +57,7 @@ Luckily, we use Aleph as HTTP server and it allows us to [get the list of header
     (get-all-headers "x-forwarded-for")
     first
     get-last-ip)
-```
+~~~
 
 We have used Jetty originally and I'm glad we have switched to Aleph before tripping over this. We would have had a hard time with a fix because Jetty ring adapter just [parses headers into plain Clojure map][3] and there seems to be no way to access them separately other then writing own adapter.
 

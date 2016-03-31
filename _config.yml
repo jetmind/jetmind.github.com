@@ -18,10 +18,8 @@ twitter_username: igrbnd
 disqus_shortname: jet-techblog
 
 # Build settings
-markdown:     redcarpet
-redcarpet:
-  extensions: ['smart']
-highlighter:   # set to 'pygments' to enable highlighting
+markdown: kramdown
+highlighter:  # set to 'pygments' to enable highlighting
 # permalink:    pretty  # commented out to match urls from old theme
 sass:
   compressed: true
