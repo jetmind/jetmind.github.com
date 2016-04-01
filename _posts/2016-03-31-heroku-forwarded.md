@@ -8,7 +8,7 @@ We have this small app running on Heroku. It's a simple HTTP API with dozen of e
 
 This check is implemented using IP address as person's identity, i.e. it's allowed to vote only once in N hours from the same IP. Since app is running on Heroku, every request is passed through proxy (heroku router), so we can't rely on the `:remote-addr` but we can rely on `X-Forwarded-For` header, since [the router guarantees][1] that IP of origin of the request will be the last item in this header.
 
-But. That's not a whole story. Interesting things will happen if client passes more than one `X-Forwarded-For` header, instead of single header with values separated by commas, i.e. this:
+That's not a whole story and it isn't documented anywhere as far as I can see. Interesting things will happen if client passes more than one `X-Forwarded-For` header, instead of single header with values separated by commas, i.e. this:
 
 ~~~sh
 curl -H"X-Forwarded-For: 10.10.10.10" -H"X-Forwarded-For: 20.20.20.20" http://host/endpoint
