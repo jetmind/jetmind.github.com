@@ -18,6 +18,7 @@ Cook does) Aldrich focuses on more high level aspect of objects, which he calls
 *service abstraction*:
 
 **§3**
+
 > The key design leverage provided by objects is the ability to define
 > nontrivial abstractions that are modularly extensible, where instances of
 > those extensions can interoperate in a first-class way.  
@@ -37,6 +38,7 @@ abstraction by other means to enable big systems to be built of extensible and
 interoperable parts. For example, [VFS][vfs] in Linux:
 
 **§4.2**
+
 > Linux uses service abstractions in order to support multiple file systems.
 > There are vtable-like structures such as `file_operations` that are used to
 > dispatch operations such as read to the code that implements file reading in a
@@ -49,6 +51,7 @@ be one more example of inventing different forms of objects to enable
 interoperable parts.  
 
 **§5**
+
 > I have argued that objects provide a unique form of service abstraction that
 > supports interoperable extensions. This interoperability cannot be duplicated
 > in other programming paradigms without likewise creating service abstractions,

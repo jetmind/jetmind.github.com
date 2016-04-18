@@ -11,13 +11,16 @@ This check is implemented using IP address as person's identity, i.e. it's allow
 That's not a whole story and it isn't documented anywhere as far as I can see. Interesting things will happen if client passes more than one `X-Forwarded-For` header, instead of single header with values separated by commas, i.e. this:
 
 ~~~sh
-curl -H"X-Forwarded-For: 10.10.10.10" -H"X-Forwarded-For: 20.20.20.20" http://host/endpoint
+curl -H"X-Forwarded-For: 10.10.10.10" \
+     -H"X-Forwarded-For: 20.20.20.20" \
+     http://host/endpoint
 ~~~
 
 instead of this:
 
 ~~~sh
-curl -H"X-Forwarded-For: 10.10.10.10,20.20.20.20" http://host/endpoint
+curl -H"X-Forwarded-For: 10.10.10.10,20.20.20.20" \
+     http://host/endpoint
 ~~~
 
 In this case the router will add client's IP *only* to the end of the *first* header, but will pass *both* headers to the app.
@@ -30,7 +33,7 @@ So, the app will get this:
 
 ~~~sh
 ...
-X-Forwarded-For: 10.10.10.10,99.99.99.99    # real IP appended by heroku router
+X-Forwarded-For: 10.10.10.10,99.99.99.99  # real IP appended by the router
 X-Forwarded-For: 20.20.20.20
 ...
 ~~~
@@ -38,7 +41,7 @@ X-Forwarded-For: 20.20.20.20
 and parse it into this:
 
 ~~~clojure
-{"x-forwarded-for" "10.10.10.10,99.99.99.99,20.20.20.20"
+{"x-forwarded-for" "10.10.10.10,99.99.99.99,20.20.20.20"}
 ~~~
 
 The IP address we want is no longer at the end. It is in the middle! So, somebody mean can vote unlimited number of times if he manages to pass additional `X-Forwarded-For` header with fake IP, changing IPs between every request.
