@@ -48,8 +48,8 @@ footer {
   font-size: $small;
 }
 blockquote {
-  font-style: italic;
   border-left: thin solid $border-color;
+  color: $greyed-out-color;
   padding-left: 0.5rem;
   footer {
       font-size: .65rem;
