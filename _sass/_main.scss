@@ -3,10 +3,10 @@
 $normal-color: #000;
 $greyed-out-color: #999;
 $link-color: #477dca;
-$visited-link-color: #88A1BF;
 $code-color: #333;
 $border-color: #f3f3f3;
 $bg-color: #fafafa;
+$code-bg-color: #eee;
 
 $small: .8rem;
 $footer-size: 120px;
@@ -16,27 +16,26 @@ body {
 }
 html, body {
   color: $normal-color;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.5;
   height: 100%;
 }
-h1 { font-size: 1.7rem; font-weight: normal; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.3rem; }
-h6 { font-size: 1.2rem; }
+h1 { font-size: 2.5rem; font-weight: normal; }
+h2 { font-size: 1.6rem; font-weight: normal; }
+h3 { font-size: 1.5rem; font-weight: normal; }
+h4 { font-size: 1.4rem; font-weight: normal; }
+h5 { font-size: 1.3rem; font-weight: normal; }
+h6 { font-size: 1.2rem; font-weight: normal; }
 a {
   color: $link-color;
   text-decoration: none;
 }
-a:hover { text-decoration: underline; }
-a:visited { color: $visited-link-color; }
+a:hover { border-bottom: 1px dotted; }
 div { margin: .1rem 0; }
 p { margin: .5rem 0; }
 .wrapper {
   margin: 0 auto;
-  max-width: 840px;
+  max-width: 720px;
   padding-bottom: 3rem;
 }
 header {
@@ -57,21 +56,34 @@ blockquote {
       font-style: normal;
   }
 }
-code {
+code, pre {
+  background: $code-bg-color;
   font-size: 0.75rem;
-  color: $code-color;
+}
+p code {
+  border-radius: 4px;
+  font-weight: bold;
+  padding: .2rem .5rem;
+  white-space: nowrap;
+}
+pre {
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 1rem;
+  padding-right: .1rem;
+  overflow: auto;
 }
 .post-list {
   .post-link {
     float: left;
-    width: 566px;
+    width: 496px;
   }
   .time {
     color: $greyed-out-color;
     text-align: right;
     margin-right: 24px;
     float: left;
-    width: 250px;
+    width: 200px;
   }
   .row::after {
     content: "";
